@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>500 for Change</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- NAV -->
+  <header class="nav">
+    <div class="nav-left">
+      <div class="logo-500">500</div>
+      <div class="logo-text">
+        <div class="small">Kelsey & Quinn</div>
+        <div class="big">500 FOR CHANGE</div>
+      </div>
+    </div>
+
+    <nav class="nav-right">
+      <a href="#mission">Mission</a>
+      <a href="#donate">Donate</a>
+      <a href="#updates">Updates</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-small nav-donate" target = "_blank" href = "https://www.seattlechildrens.org/giving/guilds/join-start/?gad_source=1&gad_campaignid=20605168965&gbraid=0AAAAAD3sjwZBdY0oVcWU_16FPF8VUoike&gclid=CjwKCAiAzOXMBhASEiwAe14SabHVxG5I5RuXpQAo-4LKUXQP-hGyoyg3V6jjsOXPsnCo9MjtgDbqZBoCee4QAvD_BwE">Donate Now</a>
+    </nav>
+  </header>
+
+  <!-- HERO (VIDEO BACKGROUND) -->
+  <section class="hero" id="top">
+    <video class="bg-video" autoplay muted loop playsinline preload="auto">
+      <!-- Replace with your own file path in Replit -->
+      <source src="assets/hero.mp4" type="video/mp4" />
+    </video>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <div class="hero-brand">
+        <div class="hero-small">Kelsey and Quinn</div>
+        <div class="hero-title">500 FOR CHANGE</div>
+      </div>
+
+      <h1 class="hero-headline">Every mile<br/>matters.</h1>
+      <p class="hero-sub">Do today for tomorrow.</p>
+
+      <div class="hero-actions">
+        <a class="btn" href="#donate">Donate Now</a>
+        <a class="btn btn-ghost" href="#mission">Our Mission</a>
+      </div>
+    </div>
+
+    <div class="scroll-hint">Scroll</div>
+  </section>
+
+  <!-- MISSION -->
+  <section class="section section-cream" id="mission">
+    <div class="container two-col">
+      <div>
+        <h2 class="serif">Where effort<br/>meets impact</h2>
+      </div>
+
+      <div>
+        <p class="body">
+          We’re taking on 500 miles to support the kids at Seattle Children’s Hospital.
+          Every mile represents commitment, effort, and belief in a future where every child
+          gets the care they deserve. This run turns movement into impact—funding lifesaving
+          treatment, critical research, and support for families when it matters most.
+          Donate to help turn miles into hope.
+        </p>
+
+        <div class="progress-wrap">
+          <div class="progress-bar" aria-label="Fundraising progress">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+          <div class="progress-meta">
+            <div class="progress-label">Progress</div>
+            <div class="progress-percent"><span id="progressPercent">0</span>%</div>
+          </div>
+
+          <div class="mini-metrics">
+            <div class="metric">
+              <div class="metric-top">Miles Target</div>
+              <div class="metric-val">500</div>
+            </div>
+            <div class="metric">
+              <div class="metric-top">Miles Logged</div>
+              <div class="metric-val"><span id="milesLogged">0</span></div>
+            </div>
+            <div class="metric">
+              <div class="metric-top">Goal</div>
+              <div class="metric-val">$<span id="goalAmount">5000</span></div>
+            </div>
+          </div>
+
+          <p class="note">
+            (In <code>script.js</code>, change <b>GOAL</b>, <b>RAISED</b>, and <b>MILES</b> to match your real numbers.)
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPTIONAL SCROLL VIDEO SECTION (like your Canva play-button sections) -->
+  <section class="scroll-video">
+    <video class="scroll-video-media" autoplay muted loop playsinline preload="auto">
+      <source src="assets/scroll.mp4" type="video/mp4" />
+    </video>
+    <div class="scroll-video-overlay"></div>
+    <div class="scroll-video-content container">
+      <h2 class="serif light">The 500 Mile Commitment</h2>
+      <p class="body light">
+        Over the next several months, we will collectively run, walk, and train for 500 miles.
+        Every mile is logged. Every milestone is documented. Every step is dedicated to the children
+        at Seattle Children’s Hospital.
+      </p>
+      <a class="btn" href="#donate">Support the Mission</a>
+    </div>
+  </section>
+
+  <!-- HOW TO DONATE -->
+  <section class="section section-gold" id="donate">
+    <div class="container">
+      <h2 class="serif">How to Donate</h2>
+      <p class="body">
+        Support is simple and powerful. Click donate below to contribute.
+        Every dollar fuels treatment, research, and hope. Whether it’s $5 or $500,
+        your support moves us closer to 500 miles and beyond.
+      </p>
+
+      <!-- Replace this link with your actual donation link -->
+      <a class="btn btn-white" href="https://www.seattlechildrens.org/giving/guilds/join-start/?gad_source=1&gad_campaignid=20605168965&gbraid=0AAAAAD3sjwZBdY0oVcWU_16FPF8VUoike&gclid=CjwKCAiAzOXMBhASEiwAe14SabHVxG5I5RuXpQAo-4LKUXQP-hGyoyg3V6jjsOXPsnCo9MjtgDbqZBoCee4QAvD_BwE" target="_blank" rel="noreferrer">
+        Donate Now
+      </a>
+    </div>
+  </section>
+
+  <!-- BLOG / UPDATES -->
+  <section class="section section-cream" id="updates">
+    <div class="container">
+      <h2 class="sans">Journey Updates</h2>
+
+<div class="slider">
+  <button class="slider-btn" id="prevBtn" aria-label="Previous">←</button>
+
+  <div class="slider-track" id="blogTrack"></div>
+
+  <button class="slider-btn" id="nextBtn" aria-label="Next">→</button>
+</div>
+
+<!-- Modal stays the same -->
+<div class="modal" id="modal">
+  <div class="modal-card">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-title" id="modalTitle">Title</div>
+    <div class="modal-body" id="modalBody">Body</div>
+  </div>
+</div>
+
+      <!-- Simple modal for posts -->
+      <div class="modal" id="modal">
+        <div class="modal-card">
+          <button class="modal-close" onclick="closeModal()">✕</button>
+          <div class="modal-title" id="modalTitle">Title</div>
+          <div class="modal-body" id="modalBody">Body</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <footer class="footer" id="contact">
+    <div class="container footer-grid">
+      <div>
+        <h2 class="serif light">Contact us for<br/>inquiries and partnerships.</h2>
+      </div>
+
+      <div class="contact-box">
+        <div class="contact-row">
+          <div class="contact-label">Phone</div>
+          <div class="contact-val">(206) 538-9480</div>
+        </div>
+
+        <div class="contact-row">
+          <div class="contact-label">Email</div>
+          <div class="contact-val">kelseykinter@500forchange.com</div>
+        </div>
+
+        <div class="contact-row">
+          <div class="contact-label">Socials</div>
+          <div class="contact-val">
+            <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
