@@ -1,10 +1,13 @@
 // ====== EDIT THESE NUMBERS ======
-const GOAL = 5000;   // dollars goal
 const RAISED = 0;    // dollars raised
-const MILES = 0;     // miles logged
+const MILES_GOAL = 500;
+const MILES_LOGGED = 100; // <-- update this whenever
+// ======================
 // ================================
 
-const pct = GOAL > 0 ? Math.min(100, Math.round((RAISED / GOAL) * 100)) : 0;
+const pct = MILES_GOAL > 0
+  ? Math.min(100, Math.round((MILES_LOGGED / MILES_GOAL) * 100))
+  : 0;
 
 function animateCount(el, to, duration = 900) {
   if (!el) return;
@@ -22,15 +25,16 @@ function animateCount(el, to, duration = 900) {
 
 window.addEventListener("load", () => {
   const progressFill = document.getElementById("progressFill");
-  const progressPercent = document.getElementById("progressPercent");
-  const milesLogged = document.getElementById("milesLogged");
-  const goalAmount = document.getElementById("goalAmount");
+const progressPercent = document.getElementById("progressPercent");
+const milesLoggedEl = document.getElementById("milesLogged");
+const milesGoalEl = document.getElementById("goalAmount"); // we can reuse this id
+const moneyRaisedEl = document.getElementById("raiseAmount");
 
-  if (goalAmount) goalAmount.textContent = String(GOAL);
-
-  if (progressFill) progressFill.style.width = pct + "%";
-  animateCount(progressPercent, pct);
-  animateCount(milesLogged, MILES);
+if (milesGoalEl) milesGoalEl.textContent = String(MILES_GOAL);
+if (progressFill) progressFill.style.width = pct + "%";
+if (progressPercent) progressPercent.textContent = String(pct);
+if (milesLoggedEl) milesLoggedEl.textContent = String(MILES_LOGGED);
+if (moneyRaisedEl) moneyRaisedEl.textContent = String(RAISED);
 
   // Optional: fade hero video slightly on scroll
   const hero = document.querySelector(".hero");
